@@ -1,0 +1,25 @@
+Spawn:
+  World: "world"
+  X: 100
+  Y: 100
+  Z: 100
+  Yaw: 50
+  Pitch: 50
+Arena:
+  First:
+    X:
+    Y:
+    Z:
+    Yaw:
+    Pitch:
+
+GUI:
+  redteam:
+    material: "WOOL"
+    data: 12
+  blueteam:
+    material: "WOOL"
+    data: 13
+  greenteam:
+    material: "WOOL"
+    data: 13
