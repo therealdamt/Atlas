@@ -26,6 +26,10 @@ public class ProfileHandler {
         });
     }
 
+    public boolean hasProfile(UUID uuid) {
+        return getAllProfiles().stream().anyMatch(profile -> profile.getUUID() == uuid);
+    }
+
     public Collection<Profile> getAllProfiles() {
         return Profile.profileHashMap.values();
     }

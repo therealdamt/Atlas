@@ -12,6 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import xyz.damt.command.TeamCommand;
 import xyz.damt.command.framework.BaseCommand;
 import xyz.damt.profile.ProfileHandler;
+import xyz.damt.profile.ProfileListener;
 import xyz.damt.team.TeamHandler;
 import xyz.damt.handlers.config.ConfigHandler;
 
@@ -57,6 +58,8 @@ public class Atlas extends JavaPlugin {
         Arrays.asList(
                 new TeamCommand()
         ).forEach(BaseCommand::register);
+
+        this.getServer().getPluginManager().registerEvents(new ProfileListener(), this);
     }
 
     private void loadDB() {
