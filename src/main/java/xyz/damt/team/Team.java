@@ -60,6 +60,13 @@ public class Team {
         return teamPlayers.stream().anyMatch(string -> UUID.fromString(string).equals(uuid));
     }
 
+    public void remove() {
+        atlas.getServer().getScheduler().runTaskAsynchronously(atlas, () -> {
+            setTeamMembers(null);
+           atlas.getMongoExecutor().execute(() -> atlas.getTeams().deleteOne(teamDocument));
+        });
+    }
+
     public List<Player> getOnlineTeamPlayers() {
         List<Player> onlinePlayers = new ArrayList<>();
         this.teamPlayers.forEach(string -> { if (atlas.getServer().getPlayer(string) != null) onlinePlayers.add(atlas.getServer().getPlayer(string)); });

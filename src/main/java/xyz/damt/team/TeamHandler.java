@@ -1,8 +1,10 @@
 package xyz.damt.team;
 
 import org.bson.Document;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import xyz.damt.Atlas;
+import xyz.damt.profile.Profile;
 import xyz.damt.team.Team;
 
 import java.util.HashMap;
@@ -26,6 +28,10 @@ public class TeamHandler {
            });
 
         });
+    }
+
+    public Team getTeamOfPlayer(Player player) {
+        return Profile.getProfileByUUID(player.getUniqueId()).getTeam();
     }
 
 }

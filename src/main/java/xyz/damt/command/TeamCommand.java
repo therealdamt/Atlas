@@ -4,6 +4,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import xyz.damt.command.framework.BaseCommand;
 import xyz.damt.command.sub.TeamCreateCommand;
+import xyz.damt.command.sub.TeamDeleteCommand;
 import xyz.damt.util.CC;
 
 import java.util.Arrays;
@@ -16,6 +17,7 @@ public class TeamCommand extends BaseCommand {
 
         this.playerOnly = true;
         this.getSubCommands().add(new TeamCreateCommand());
+        this.getSubCommands().add(new TeamDeleteCommand());
     }
 
     @Override
