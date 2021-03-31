@@ -1,4 +1,4 @@
-package xyz.damt.handlers;
+package xyz.damt.team;
 
 import org.bson.Document;
 import org.bukkit.plugin.java.JavaPlugin;

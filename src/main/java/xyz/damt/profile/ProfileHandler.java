@@ -1,4 +1,4 @@
-package xyz.damt.handlers;
+package xyz.damt.profile;
 
 import com.mongodb.Block;
 import org.bson.Document;

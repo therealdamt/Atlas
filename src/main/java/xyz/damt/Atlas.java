@@ -11,8 +11,8 @@ import org.bson.Document;
 import org.bukkit.plugin.java.JavaPlugin;
 import xyz.damt.command.TeamCommand;
 import xyz.damt.command.framework.BaseCommand;
-import xyz.damt.handlers.ProfileHandler;
-import xyz.damt.handlers.TeamHandler;
+import xyz.damt.profile.ProfileHandler;
+import xyz.damt.team.TeamHandler;
 import xyz.damt.handlers.config.ConfigHandler;
 
 import java.util.Arrays;
